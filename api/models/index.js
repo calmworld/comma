@@ -4,7 +4,7 @@ const Sequelize = require('sequelize');
 const sequelize = new Sequelize(dbConfig.database, dbConfig.username, dbConfig.password, {
     host: dbConfig.host,
     dialect: dbConfig.dialect,
-    operatorsAliases: false,
+    // operatorsAliases: false,
     pool: {
         max: dbConfig.pool.max,
         min: dbConfig.pool.min,
@@ -18,6 +18,6 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.customers = require('./customer.model.js')(sequelize, Sequelize);
+db.clients = require('./client.model.js')(sequelize, Sequelize);
 
 module.exports = db;

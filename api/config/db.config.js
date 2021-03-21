@@ -1,9 +1,9 @@
 module.exports = {
-    host: "localhost",
-    username: "database_dev",
-    password: "database_dev",
-    database: "gmachines",
-    dialect: "postgres",
+    host: 'localhost',
+    username: null,
+    password: 'database_dev',
+    database: 'gmachines',
+    dialect: 'postgres',
     pool: {
       max: 5,
       min: 0,
