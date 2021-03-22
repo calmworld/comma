@@ -4,6 +4,7 @@ const csvController = require('../controllers/csv.controller');
 
 let routes = (app) => {
     router.get('/clients', csvController.getClients);
+    router.post('/new', csvController.postClients);
 
     app.use('/api/csv', router);
 }

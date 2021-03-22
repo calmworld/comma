@@ -24,7 +24,6 @@ let csvStream = fastcsv
     });
 
 
-    //const query = 'INSERT INTO clients (date, client, project, project_code, hours, billable, first_name, last_name, billable_rate) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)';
     const query = "INSERT INTO clients (date, client, project, project_code, hours, billable, first_name, last_name, billable_rate) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)";
 
     pool.connect((err, client, done) => {
@@ -47,6 +46,7 @@ let csvStream = fastcsv
   });
 
 stream.pipe(csvStream);
+
 
 module.exports = (sequelize, Sequelize) => {
     const Client = sequelize.define('client', {
@@ -78,6 +78,8 @@ module.exports = (sequelize, Sequelize) => {
         billable_rate: {
             type: Sequelize.INTEGER
         }
+    }, {
+        timestamps: false
     });
     Client.removeAttribute('id');
     Client.removeAttribute('createdAt');

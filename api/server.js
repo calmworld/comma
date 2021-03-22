@@ -6,7 +6,7 @@ const db = require('./models');
 const initRoutes = require('./routes/client.routes');
 
 
-
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 initRoutes(app);
 
