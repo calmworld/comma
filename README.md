@@ -12,7 +12,6 @@ Full Stack CSV File Parser Built With RESTful CRUD API
 ## API Dependencies/Modules:
 - ```sequelize```
 - ```pg```
-- ```multer```
 - ```fast-csv```
 - ```fs```
 
