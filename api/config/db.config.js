@@ -1,7 +1,7 @@
 module.exports = {
     host: 'localhost',
     username: null,
-    password: 'database_dev',
+    password: null,
     database: 'gmachines',
     dialect: 'postgres',
     pool: {
