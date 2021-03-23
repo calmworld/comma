@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ClientDataService from '../services/ClientService';
+import { Link } from "react-router-dom";
 
 const AddClient = () => {
     const initialClientState = {
@@ -67,8 +68,11 @@ const AddClient = () => {
                 <div>
                     <h4>Submission Successful!</h4>
                     <button className="btn btn-success" onClick={newClient}>
-                        Add
+                        Add Another Client
                     </button>
+                    <Link to={"/clients"} className="btn btn-primary">
+                        Return to Clients
+                    </Link>
                 </div>
             ) : (
                 <div>
@@ -93,6 +97,18 @@ const AddClient = () => {
                             value={client.client}
                             onChange={handleInputChange}
                             name="client"
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="project">Project</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="project"
+                            value={client.project}
+                            onChange={handleInputChange}
+                            name="project"
                         />
                     </div>
 
