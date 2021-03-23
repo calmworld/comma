@@ -23,9 +23,9 @@ const ClientsList = (props) => {
             });
     };
 
-    const refreshList = () => {
-        retrieveClients();
-    };
+    // const refreshList = () => {
+    //     retrieveClients();
+    // };
 
     const columns = useMemo(
         () => [

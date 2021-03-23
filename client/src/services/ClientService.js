@@ -1,11 +1,12 @@
 import http from '../http-common';
 
 const getAll = () => {
-    return http.get('/clients');
+    // return http.get('/clients');
+    return http.get('/');
 };
 
 const create = (data) => {
-    return http.post('/clients', data);
+    return http.post('/new', data);
 }
 
 
