@@ -1,8 +1,7 @@
 import http from '../http-common';
 
 const getAll = () => {
-    // return http.get('/clients');
-    return http.get('/');
+    return http.get('/clients');
 };
 
 const create = (data) => {

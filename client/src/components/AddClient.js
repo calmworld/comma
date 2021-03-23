@@ -3,15 +3,16 @@ import ClientDataService from '../services/ClientService';
 
 const AddClient = () => {
     const initialClientState = {
-    date: "",
-    client: "",
-    project: "",
-    project_code: "",
-    hours: 0,
-    billable: false,
-    first_name: "", 
-    last_name: "", 
-    billable_rate: 0
+        // id: null,
+        date: "",
+        client: "",
+        project: "",
+        project_code: "",
+        hours: 0,
+        billable: false,
+        first_name: "", 
+        last_name: "", 
+        billable_rate: 0
     };
 
     const [client, setClient] = useState(initialClientState);
@@ -38,6 +39,7 @@ const AddClient = () => {
         ClientDataService.create(data)
             .then(response => {
                 setClient({
+                    // id: response.data.id,
                     date: response.data.date,
                     client: response.data.client,
                     project: response.data.project,
@@ -52,7 +54,7 @@ const AddClient = () => {
                 console.log(response.data);
             })
             .catch(e => {
-                console.log(e);
+                // console.log(e);
             });
     };
     const newClient = () => {
@@ -60,7 +62,7 @@ const AddClient = () => {
         setSubmitted(false);
     };
     return (
-        <div>
+        <div className="submit-form">
             {submitted ? (
                 <div>
                     <h4>Submission Successful!</h4>
@@ -68,7 +70,6 @@ const AddClient = () => {
                         Add
                     </button>
                 </div>
-
             ) : (
                 <div>
                     <div className="form-group">
