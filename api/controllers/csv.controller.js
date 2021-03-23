@@ -5,6 +5,7 @@ const Client = db.clients;
 const getClients = (req, res) => {
   Client.findAll()
     .then((data) => {
+      res.header("Access-Control-Allow-Origin", "*");
       res.send(data);
     })
     .catch((err) => {
@@ -41,6 +42,7 @@ const postClients = (req, res) => {
 
   Client.create(newEntry)
     .then((data) => {
+      res.header("Access-Control-Allow-Origin", "*");
       res.send(data);
     })
     .catch((err) => {

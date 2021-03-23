@@ -9,6 +9,9 @@ const initRoutes = require('./routes/client.routes');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 initRoutes(app);
+const whitelist = ['http://localhost:3000']
+
+
 
 db.sequelize.sync();
 //DROP DATABASE During production
@@ -17,7 +20,7 @@ db.sequelize.sync();
 // });
 
 
-let port = 6000;
+let port = 3003;
 app.listen(port, () => {
     console.log(`Listening on port: ${port}`);
 })
