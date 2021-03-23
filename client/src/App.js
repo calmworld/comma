@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import "@fortawesome/fontawesome-free/js/all.js";
 
 import AddClient from './components/AddClient';
+import ClientsList from './components/ClientsList';
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
 
       <div className='container mt-3'>
         <Switch>
-          {/* <Route exact path={['/', 'clients']} component={ClientsList} /> */}
+          <Route exact path={['/', 'clients']} component={ClientsList} />
           <Route exact path='/add' component={AddClient} />
         </Switch>
       </div>
