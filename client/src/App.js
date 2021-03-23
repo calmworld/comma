@@ -6,6 +6,7 @@ import "@fortawesome/fontawesome-free/js/all.js";
 
 import AddClient from './components/AddClient';
 import ClientsList from './components/ClientsList';
+import Totals from './components/Totals'
 
 function App() {
   return (
@@ -25,13 +26,19 @@ function App() {
               Add Client
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to={"/totals"} className="nav-link">
+              Totals
+            </Link>
+          </li>
         </div>
       </nav>
 
       <div className='container mt-3'>
         <Switch>
-          <Route exact path={['/clients']} component={ClientsList} />
+          <Route exact path='/clients' component={ClientsList} />
           <Route exact path='/new' component={AddClient} />
+          <Route exact path='/totals' component={Totals} />
         </Switch>
       </div>
     </div>
