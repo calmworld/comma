@@ -4,10 +4,35 @@ import 'bootstrap/dist/css/bootstrap.min.css'; //compiled css
 import "@fortawesome/fontawesome-free/css/all.css";
 import "@fortawesome/fontawesome-free/js/all.js";
 
+import AddClient from './components/AddClient';
+
 function App() {
   return (
     <div>
-      
+      <nav className="navbar navbar-expand navbar-dark bg-dark">
+        <a href="/Clients" className="navbar-brand">
+          Comma
+        </a>
+        <div className="navbar-nav mr-auto">
+          <li className="nav-item">
+            <Link to={"/clients"} className="nav-link">
+              Clients
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to={"/add"} className="nav-link">
+              Add
+            </Link>
+          </li>
+        </div>
+      </nav>
+
+      <div className='container mt-3'>
+        <Switch>
+          {/* <Route exact path={['/', 'clients']} component={ClientsList} /> */}
+          <Route exact path='/add' component={AddClient} />
+        </Switch>
+      </div>
     </div>
   );
 }
