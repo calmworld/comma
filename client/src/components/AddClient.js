@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const AddClient = () => {
     const initialClientState = {
-        // id: null,
         date: "",
         client: "",
         project: "",
@@ -40,7 +39,6 @@ const AddClient = () => {
         ClientDataService.create(data)
             .then(response => {
                 setClient({
-                    // id: response.data.id,
                     date: response.data.date,
                     client: response.data.client,
                     project: response.data.project,
@@ -55,7 +53,7 @@ const AddClient = () => {
                 console.log(response.data);
             })
             .catch(e => {
-                // console.log(e);
+                console.log(e);
             });
     };
     const newClient = () => {
@@ -69,9 +67,10 @@ const AddClient = () => {
                     <h4>Submission Successful!</h4>
                     <button className="btn btn-success" onClick={newClient}>
                         Add Another Client
-                    </button>
+                    </button><br/>
+                    <br />
                     <Link to={"/clients"} className="btn btn-primary">
-                        Return to Clients
+                        Return to All Clients
                     </Link>
                 </div>
             ) : (

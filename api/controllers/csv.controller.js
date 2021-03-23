@@ -43,7 +43,6 @@ const postClients = (req, res) => {
   Client.create(newEntry)
     .then((data) => {
       res.send(data);
-      // res.header("Access-Control-Allow-Origin", "*")
     })
     .catch((err) => {
       res.status(500).send({
@@ -52,6 +51,8 @@ const postClients = (req, res) => {
       });
     });
 };
+
+
 
 module.exports = {
   getClients,
