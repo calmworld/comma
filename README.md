@@ -38,9 +38,9 @@ MacOS Big Sur 11.2.3
 - Run ```npm start``` in your terminal to start React client
 
 ## Client Navigation:
-- Click on Clients in the nav bar to see a comprehensive list of all clients.
-- Click on Add Client in the nav bar to create a new client.
-- Click on Totals in the nav bar to select an aggregated view of clients, projects, billable hours and billable amounts.
+- Click on ```Clients``` in the nav bar to see a comprehensive list of all clients.
+- Click on ```Add Client``` in the nav bar to create a new client.
+- Click on ```Totals``` in the nav bar to select an aggregated view of clients, projects, billable hours and billable amounts.
 
 ## Client Totals:
 - To group a category click on the map-pin sign next to each category. You can choose more than one.
