@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import ClientDataService from "../services/ClientService";
 import { useExpanded, useGroupBy, useTable } from "react-table";
+import { FaAsterisk, FaMapPin, FaAngleDoubleRight, FaAngleDoubleDown } from 'react-icons/fa';
 
 
 const Totals = (props) => {
@@ -86,7 +87,7 @@ const Totals = (props) => {
                             {column.canGroupBy ? (
                                 // If the column can be grouped, let's add a toggle
                                 <span {...column.getGroupByToggleProps()}>
-                                {column.isGrouped ? '🛑 ' : '👊 '}
+                                {column.isGrouped ? <FaAsterisk/> : <FaMapPin/> }
                                 </span>
                             ) : null}
                             {column.render("Header")}
@@ -107,7 +108,7 @@ const Totals = (props) => {
                                     // If it's a grouped cell, add an expander and row count
                                     <>
                                         <span {...row.getToggleRowExpandedProps()}>
-                                            {row.isExpanded ? '👇' : '👉'}
+                                            {row.isExpanded ? <FaAngleDoubleRight/> : <FaAngleDoubleDown/> }
                                         </span>{' '}
                                         {cell.render('Cell')} ({row.subRows.length})
                                     </>
