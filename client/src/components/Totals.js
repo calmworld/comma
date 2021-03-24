@@ -72,9 +72,9 @@ const Totals = (props) => {
 
     return (
         <div className="col-md-12 list">
-            <pre>
+            {/* <pre>
                 <code>{JSON.stringify({ groupBy, expanded }, null, 2)}</code>
-            </pre>
+            </pre> */}
             <table
             className="table table-striped table-bordered"
             {...getTableProps()}

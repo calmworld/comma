@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <a href="/" className="navbar-brand">
+        <a href="/clients" className="navbar-brand">
           Comma
         </a>
         <div className="navbar-nav mr-auto">
